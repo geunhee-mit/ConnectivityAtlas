@@ -1,16 +1,9 @@
-$white: #fbe8ee;
-$black: #0a0a0a;
-
 :root {
   --scrollbar-size: 0px;
 }
 
 *, :after, :before {
   box-sizing: border-box;
-}
-
-body {
-
 }
 
 .viewport {
@@ -30,18 +23,16 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Courier New", Courier, monospace;
-  *:not(.change_color_page) {
-    color: $white;
-    transition: color 0.5s ease-in-out, border-color 0.5s ease;
-    border-color: $white;
-  }
-  &.white {
-    *:not(.change_color_page) {
-      color: $black;
-      transition: color 0.5s ease-in-out, border-color 0.5s ease;
-      border-color: $black;
-    }
-  }
+}
+body *:not(.change_color_page) {
+  color: #fbe8ee;
+  transition: color 0.5s ease-in-out, border-color 0.5s ease;
+  border-color: #fbe8ee;
+}
+body.white *:not(.change_color_page) {
+  color: #0a0a0a;
+  transition: color 0.5s ease-in-out, border-color 0.5s ease;
+  border-color: #0a0a0a;
 }
 
 .change_color_page {
@@ -51,13 +42,13 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: $black;
+  background-color: #0a0a0a;
   transition: background-color 0.5s ease;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  &.white {
-    background-color: $white;
-  }
+}
+.change_color_page.white {
+  background-color: #fbe8ee;
 }
 
 .header {
@@ -70,10 +61,10 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease-in-out;
-  background-color: $white;
-  &.white {
-    background-color: $black;
-  }
+  background-color: #fbe8ee;
+}
+.header.white {
+  background-color: #0a0a0a;
 }
 
 .scrollbar-test {
@@ -125,18 +116,18 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 70px;
-  &.left {
-    justify-content: flex-start;
-  }
-  p {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-width: 2px;
-    border-style: solid;
-  }
+}
+.single-item.left {
+  justify-content: flex-start;
+}
+.single-item p {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-style: solid;
 }
 
 .horizontal-scroll-wrapper {
@@ -149,10 +140,10 @@ body {
 
 .horizontal-scroll .single-item {
   flex: 0 0 100vw;
-  p {
-    width: 600px;
-    height: 600px;
-    max-width: 80%;
-    max-height: 80%;
-  }
+}
+.horizontal-scroll .single-item p {
+  width: 600px;
+  height: 600px;
+  max-width: 80%;
+  max-height: 80%;
 }
