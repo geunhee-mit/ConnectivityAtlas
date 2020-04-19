@@ -2,7 +2,7 @@
 
 class SmoothScroll {
   constructor(options) {
-    
+
     this.endThreshold = 0.05;
     this.requestId = null;
     this.maxDepth = 10;
@@ -42,7 +42,7 @@ class SmoothScroll {
     this.childElements = this._childElements();
 
     this.rectHorStart = this.horizontalScrollWrapper.getBoundingClientRect();
-    
+
     this.horzItemStart = {
       top: this.rectHorStart.top,
       bottom: this.rectHorStart.bottom,
@@ -114,9 +114,9 @@ class SmoothScroll {
         topScroll: rectHor.top + scrollY,
         horizonstalMove: 0,
       };
-      
+
       itemHor.horizonstalMove += this.currentScroll - this.horzItemStart.top;
-      if(scrollY >= this.horzItemStart.top && scrollY <= this.horzItemStart.bottom - itemHor.targetRect.height){  
+      if(scrollY >= this.horzItemStart.top && scrollY <= this.horzItemStart.bottom - itemHor.targetRect.height){
         itemHor.target.style.position = 'fixed';
         itemHor.target.style.transform = `translate3d(-${itemHor.horizonstalMove}px,0px,0px)`;
 

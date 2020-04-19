@@ -6,6 +6,20 @@
   box-sizing: border-box;
 }
 
+#titleKR {
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 120px;
+  text-align: center;
+}
+
+#titleEN {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+
 .viewport {
   overflow: hidden;
   position: fixed;
@@ -22,7 +36,8 @@ body {
   overflow-y: scroll;
   padding: 0;
   margin: 0;
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: 'Nanum Myeongjo', serif;
 }
 body *:not(.change_color_page) {
   color: #fbe8ee;
