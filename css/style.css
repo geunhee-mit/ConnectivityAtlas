@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 .viewport {
   overflow: hidden;
   position: fixed;
@@ -241,6 +244,21 @@ body.white *:not(.change_color_page) {
 .horizontal-line {
   border-top: 20px solid #FFF;
   height: 0px;
+  width: 620px;
+  position: absolute;
+  top: 620px;
+}
+
+/* line test */
+.timeline {
+  /* position: fixed; */
+  /* top: 500px; */
+  /* left: 100px; */
+  /* height: 0px;
+  width: 600px;
+  background-color: red; */
+  border-top: 20px solid #FFF;
+  height: 0px;
   width: 600px;
   position: absolute;
   top: 650px;
@@ -249,10 +267,34 @@ body.white *:not(.change_color_page) {
 
 /* text... */
 
+@font-face {
+  font-family: 'BMEULJIRO';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'TmonMonsori';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 #titleKR {
   /* font-family: 'Black Han Sans', sans-serif; */
-  font-family: 'Do Hyeon', sans-serif;
-  font-size: 260px;
+  /* font-family: 'TmonMonsori'; */
+  font-family: 'GmarketSansBold';
+  /* font-family: 'Do Hyeon', sans-serif; */
+  font-size: 220px;
   text-align: center;
 }
 

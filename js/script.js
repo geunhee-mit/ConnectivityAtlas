@@ -403,3 +403,15 @@ var scene = new ScrollMagic.Scene({
 })
 
 .addTo(controller);
+
+
+
+// line test
+
+let timeLine = document.querySelector('.timeline');
+
+window.addEventListener('scroll', () => {
+  let hauteur = document.body.clientHeight;
+  let scrollY = (window.scrollY + window.innerHeight)*100/hauteur;
+  timeLine.style.width = `${scrollY}vw`;
+});
