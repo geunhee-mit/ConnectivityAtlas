@@ -136,6 +136,34 @@ body.white *:not(.change_color_page) {
   border-style: solid; */
 }
 
+.single-item h1 {
+  width: 800px;
+  height: 100px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  /* font-family: 'Do Hyeon', sans-serif;
+  font-size: 200px;
+  text-align: center; */
+  /* border-width: 2px;
+  border-style: solid; */
+}
+
+.single-item h2 {
+  width: 800px;
+  height: 100px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  /* font-family: 'Do Hyeon', sans-serif;
+  font-size: 200px;
+  text-align: center; */
+  /* border-width: 2px;
+  border-style: solid; */
+}
+
 .single-item h3 {
   width: 800px;
   height: 100px;
