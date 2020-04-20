@@ -314,14 +314,7 @@ var twoLeftOffset = twoOffset.left - one;
 var firstLine = twoLeftOffset + right;
 var leftPos = para + x.left;
 
-var left = one - (x.right + para);
-var twoRightOffset = twoOffset.right - one;
-var rightPos = para + x.right;
-
 $(".horizontal-line").css({"top": x.top, "left": leftPos});
-
-$(".horizontal-line").css({"top": x.top, "right": rightPos});
-
 // init controller
 var controller = new ScrollMagic.Controller();
 
