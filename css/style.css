@@ -26,9 +26,11 @@ body {
   font-family: 'Nanum Myeongjo', serif;
 }
 body *:not(.change_color_page) {
-  color: #fbe8ee;
+  /* color: #fbe8ee; */
+  color: #ffffff;
   transition: color 0.5s ease-in-out, border-color 0.5s ease;
-  border-color: #fbe8ee;
+  /* border-color: #fbe8ee; */
+  background-color: #ffffff;
 }
 body.white *:not(.change_color_page) {
   color: #0a0a0a;
@@ -49,7 +51,8 @@ body.white *:not(.change_color_page) {
   transform-style: preserve-3d;
 }
 .change_color_page.white {
-  background-color: #fbe8ee;
+  /* background-color: #fbe8ee; */
+  background-color: #ffffff;
 }
 
 .header {
@@ -62,7 +65,8 @@ body.white *:not(.change_color_page) {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease-in-out;
-  background-color: #fbe8ee;
+  /* background-color: #fbe8ee; */
+  background-color: #ffffff;
 }
 .header.white {
   background-color: #0a0a0a;
@@ -116,7 +120,7 @@ body.white *:not(.change_color_page) {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 70px;
+  /* font-size: 70px; */
 }
 .single-item.left {
   justify-content: flex-start;
@@ -165,7 +169,7 @@ body.white *:not(.change_color_page) {
 }
 
 .single-item h3 {
-  width: 800px;
+  width: 700px;
   height: 100px;
   display: flex;
   align-items: center;
@@ -176,6 +180,7 @@ body.white *:not(.change_color_page) {
   /* border-width: 2px;
   border-style: solid; */
 }
+
 
 .horizontal-scroll-wrapper {
   position: relative;
@@ -206,10 +211,11 @@ body.white *:not(.change_color_page) {
 
 /* line */
 .horizontal-line {
-  border-top: 4px solid #FFF;
-  height: 4px;
-  width: 0px;
+  border-top: 20px solid #FFF;
+  height: 0px;
+  width: 600px;
   position: absolute;
+  top: 650px;
 }
 
 
@@ -218,13 +224,14 @@ body.white *:not(.change_color_page) {
 #titleKR {
   /* font-family: 'Black Han Sans', sans-serif; */
   font-family: 'Do Hyeon', sans-serif;
-  font-size: 200px;
+  font-size: 260px;
   text-align: center;
 }
 
 #titleEN {
-  font-family: 'Black Han Sans', sans-serif;
-  font-size: 40px;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'Anton', sans-serif;
+  font-size: 80px;
   text-align: center;
 }
 
@@ -241,18 +248,21 @@ body.white *:not(.change_color_page) {
   font-size:30px;
 }
 
-b{
+/* b{
   font-size:80px;
   display:block;
   color:#ffffff;
   text-shadow:1px 1px 0 #bbbbbb,2px 2px 0 #cccccc,3px 3px 0 #cccccc,4px 4px 0 #cccccc,5px 5px 0 #cccccc,5px 5px 10px rgba(0,0,0,0.3);
-}
+} */
 
 
 
 span{
-  display:block;
-  text-align:center;
+  height: auto;
+  /* display:block; */
+  /* text-align:center; */
+  padding-bottom: 200px;
+  background: rgba(255, 255, 255, 0) !important;
 }
 
 .horiz {
