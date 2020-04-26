@@ -1,3 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+
+
 :root {
   --scrollbar-size: 0px;
 }
@@ -123,6 +139,11 @@ body.white *:not(.change_color_page) {
   /* font-size: 70px; */
 }
 
+#my-object {
+        height : 100%;
+        overflow : hidden;
+    }
+
 .single-item.left {
   justify-content: flex-start;
 }
@@ -178,25 +199,20 @@ body.white *:not(.change_color_page) {
   text-align: center;
   font-size: 24px;
   font-family: 'Nanum Myeongjo', serif;
-  /* border-width: 2px;
-  border-style: solid; */
 }
 
+.single-item h4 {
+  background-color: black;
+  width: 700px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Nanum Myeongjo', serif;
 
-/* .single-item .timeline {
-  position: absolute;
-  top: 0;
-  height: 100vh;
-} */
-
-/* .single-item .timeline {
-  height: 100%;
-  background-image: url(img/200420/SVG/Asset_92.svg);
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-  background-size: cover;
-} */
+}
 
 .horizontal-scroll-wrapper {
   position: relative;
@@ -258,15 +274,32 @@ body.white *:not(.change_color_page) {
   height: 0px;
   width: 620px;
   position: absolute;
-  top: 645.4px;
+  top: 66%;
 }
 
+.horizontal-line-1 {
+  border-top: 18.39px solid #FFF;
+  height: 0px;
+  width: 1200px;
+  left: 380px;
+  position: absolute;
+  top: 66%;
+}
+
+.horizontal-line-2 {
+  border-top: 18.39px solid #FFF;
+  height: 0px;
+  width: 180px;
+  left: 0px;
+  position: absolute;
+  top: 66%;
+}
 .horizontal-line-full {
     border-top: 18.39px solid #FFF;
     height: 0px;
     width: 100vw;
     position: absolute;
-    top: 645.4px;
+    top: 66%;
   }
 
 /* line test */
@@ -283,6 +316,7 @@ body.white *:not(.change_color_page) {
   position: absolute;
   top: 650px;
 }
+
 
 
 /* text... */

@@ -1,3 +1,8 @@
+AOS.init({
+  duration: 1200,
+})
+
+
 //https://codepen.io/osublake/pen/e72106811a34efcccff91a03568cc790.js?v=3
 
 class SmoothScroll {
