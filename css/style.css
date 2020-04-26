@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-
-
-
 .viewport {
   overflow: hidden;
   position: fixed;
@@ -186,6 +183,21 @@ body.white *:not(.change_color_page) {
 }
 
 
+/* .single-item .timeline {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+} */
+
+/* .single-item .timeline {
+  height: 100%;
+  background-image: url(img/200420/SVG/Asset_92.svg);
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: cover;
+} */
+
 .horizontal-scroll-wrapper {
   position: relative;
 }
@@ -242,12 +254,20 @@ body.white *:not(.change_color_page) {
 }
 
 .horizontal-line {
-  border-top: 20px solid #FFF;
+  border-top: 18.39px solid #FFF;
   height: 0px;
   width: 620px;
   position: absolute;
-  top: 620px;
+  top: 645.4px;
 }
+
+.horizontal-line-full {
+    border-top: 18.39px solid #FFF;
+    height: 0px;
+    width: 100vw;
+    position: absolute;
+    top: 645.4px;
+  }
 
 /* line test */
 .timeline {
