@@ -162,6 +162,15 @@ class SmoothScroll {
               wrapper.classList.remove('white');
             }
           }
+          else if(childAttr == "transparent"){
+            if(document.body.classList.contains('transparent')){
+              document.body.classList.remove('transparent');
+            }
+            if(wrapper.classList.contains('transparent')){
+              wrapper.classList.remove('transparent');
+            }
+          }
+
         }
       });
     }
