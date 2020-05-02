@@ -371,20 +371,20 @@ function Init(){
 }
 
 //ANIMATE
-function UpdateScreen(operator){
-	$ActualSlide = $CibleSlide;
-	if(operator=="+"){ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)+1]; }else{ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)-1]; }//Si + slide suivante / si - slide précédente
-	$('#Helper').html("From <strong>"+$ActualSlide+"</strong> to <strong>"+$CibleSlide+"</strong>");//helper
-	if(!$CibleSlide){ $ScrollState=false; $('#Helper').html("Break");$CibleSlide = $ActualSlide; return; }//Arrete tout si pas de slide avant/après
-	$ActualSlideDOM = $('.pane[data-id='+$ActualSlide+']');
-	$CibleSlideDOM = $('.pane[data-id='+$CibleSlide+']');
-	//Scroll To : Greensock GSAP
-	if( $ActualSlideDOM.closest('.prt').find('.spane').length && (operator=="+" && $ActualSlideDOM.next('.pane').length  ||  operator=="-" && $ActualSlideDOM.prev('.pane').length ) ){
-		TweenMax.to($ActualSlideDOM.closest('.spane'), $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}}); //Horizontal ou vertical
-	}else{
-		TweenMax.to(window, $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}});//Normal
-	}
-}
+// function UpdateScreen(operator){
+// 	$ActualSlide = $CibleSlide;
+// 	if(operator=="+"){ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)+1]; }else{ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)-1]; }//Si + slide suivante / si - slide précédente
+// 	$('#Helper').html("From <strong>"+$ActualSlide+"</strong> to <strong>"+$CibleSlide+"</strong>");//helper
+// 	if(!$CibleSlide){ $ScrollState=false; $('#Helper').html("Break");$CibleSlide = $ActualSlide; return; }//Arrete tout si pas de slide avant/après
+// 	$ActualSlideDOM = $('.pane[data-id='+$ActualSlide+']');
+// 	$CibleSlideDOM = $('.pane[data-id='+$CibleSlide+']');
+// 	//Scroll To : Greensock GSAP
+// 	if( $ActualSlideDOM.closest('.prt').find('.spane').length && (operator=="+" && $ActualSlideDOM.next('.pane').length  ||  operator=="-" && $ActualSlideDOM.prev('.pane').length ) ){
+// 		TweenMax.to($ActualSlideDOM.closest('.spane'), $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}}); //Horizontal ou vertical
+// 	}else{
+// 		TweenMax.to(window, $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}});//Normal
+// 	}
+// }
 
 //Init() On Resize
 $(window).resize(function(){
@@ -444,20 +444,20 @@ function Init(){
 }
 
 //ANIMATE
-function UpdateScreen(operator){
-	$ActualSlide = $CibleSlide;
-	if(operator=="+"){ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)+1]; }else{ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)-1]; }//Si + slide suivante / si - slide précédente
-	$('#Helper').html("From <strong>"+$ActualSlide+"</strong> to <strong>"+$CibleSlide+"</strong>");//helper
-	if(!$CibleSlide){ $ScrollState=false; $('#Helper').html("Break");$CibleSlide = $ActualSlide; return; }//Arrete tout si pas de slide avant/après
-	$ActualSlideDOM = $('.pane[data-id='+$ActualSlide+']');
-	$CibleSlideDOM = $('.pane[data-id='+$CibleSlide+']');
-	//Scroll To : Greensock GSAP
-	if( $ActualSlideDOM.closest('.prt').find('.spane').length && (operator=="+" && $ActualSlideDOM.next('.pane').length  ||  operator=="-" && $ActualSlideDOM.prev('.pane').length ) ){
-		TweenMax.to($ActualSlideDOM.closest('.spane'), $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}}); //Horizontal ou vertical
-	}else{
-		TweenMax.to(window, $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}});//Normal
-	}
-}
+// function UpdateScreen(operator){
+// 	$ActualSlide = $CibleSlide;
+// 	if(operator=="+"){ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)+1]; }else{ $CibleSlide = $ListSlides[$ListSlides.indexOf($ActualSlide)-1]; }//Si + slide suivante / si - slide précédente
+// 	$('#Helper').html("From <strong>"+$ActualSlide+"</strong> to <strong>"+$CibleSlide+"</strong>");//helper
+// 	if(!$CibleSlide){ $ScrollState=false; $('#Helper').html("Break");$CibleSlide = $ActualSlide; return; }//Arrete tout si pas de slide avant/après
+// 	$ActualSlideDOM = $('.pane[data-id='+$ActualSlide+']');
+// 	$CibleSlideDOM = $('.pane[data-id='+$CibleSlide+']');
+// 	//Scroll To : Greensock GSAP
+// 	if( $ActualSlideDOM.closest('.prt').find('.spane').length && (operator=="+" && $ActualSlideDOM.next('.pane').length  ||  operator=="-" && $ActualSlideDOM.prev('.pane').length ) ){
+// 		TweenMax.to($ActualSlideDOM.closest('.spane'), $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}}); //Horizontal ou vertical
+// 	}else{
+// 		TweenMax.to(window, $ScrollSpeed, {scrollTo:'.pane[data-id='+$CibleSlide+']',ease: Power2.easeOut,onComplete:function(){$ScrollState=false; $CibleSlideDOM.addClass('visible');}});//Normal
+// 	}
+// }
 
 //Init() On Resize
 $(window).resize(function(){

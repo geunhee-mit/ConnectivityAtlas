@@ -161,6 +161,11 @@ body.white *:not(.change_color_page) {
         overflow : hidden;
     }
 
+#my-object2 {
+        width : 100%;
+        overflow : hidden;
+    }
+
 #map-original {
   overflow : hidden;
 }
