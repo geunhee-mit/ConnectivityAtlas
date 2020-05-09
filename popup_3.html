@@ -36,7 +36,7 @@
           .c{font-size:18.88px;fill:#3b3b3b;font-family:KCC-KP-KwangMyeong-Medium-KP-2011KPS, KP KwangMyeong;} /*도시 라벨*/
           .d{fill:#e8e8e8;} /*도시 그룹*/
           .e{fill:#bd0d1a;} /*도시 네모...*/
-          .r{fill:#fff;stroke:#000;stroke-width:3px;} /*팝업네모*/
+          .r{fill:#fff;stroke:#000;stroke-width:3px;visibility:hidden;} /*팝업네모*/
 
           </style>
         </defs>
@@ -66,11 +66,13 @@
     <script type="text/javascript">
         function showElement() {
             element = document.querySelector('.container');
+            element = document.querySelector('.r');
             element.style.visibility = 'visible';
         }
 
         function hideElement() {
             element = document.querySelector('.container');
+            element = document.querySelector('.r');
             element.style.visibility = 'hidden';
         }
     </script>

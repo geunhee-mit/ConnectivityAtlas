@@ -39,17 +39,7 @@ svg|a:hover, svg|a:active {
   font-size: 3em;
 }
 
-.sinuiju {
-  /* display:inline-block; */
-}
 
-.hyesan {
-
-}
-
-.rason {
-
-}
 
 /* The Modal (background) */
 .modal {
@@ -68,8 +58,38 @@ svg|a:hover, svg|a:active {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.sinuiju {
+  display:inline-block;
+}
+
+.hyesan {
+  display:inline-block;
+}
+
+.rason {
+  display:inline-block;
+}
+
+
 /* Modal Content */
-.modal-content {
+.modal-content.sinuiju {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  display:inline-block;
+}
+
+.modal-content.hyesan {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content.rason {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -196,8 +216,8 @@ body.white *:not(.change_color_page) {
   left: 0;
   right: var(--scrollbar-size, 0px);
   bottom: 0;
-  z-index: 0;
-  /* pointer-events: none; */
+  /* z-index: -20; */
+  pointer-events: none;
 }
 
 .scroll-container {
@@ -226,7 +246,7 @@ body.white *:not(.change_color_page) {
   align-items: center;
   justify-content: center;
   /* font-size: 70px; */
-  z-index: 50;
+  /* z-index: 50; */
 }
 
 .single-item.map{
@@ -237,8 +257,8 @@ body.white *:not(.change_color_page) {
   align-items: center;
   justify-content: center;
   /* font-size: 70px; */
-  z-index: -20;
-  visibility: hidden;
+  /* z-index: -20; */
+  /* visibility: hidden; */
 }
 
 #my-object {
@@ -247,12 +267,27 @@ body.white *:not(.change_color_page) {
     }
 
 #my-object2 {
-        width : 100%;
-        overflow : hidden;
+    width : 100%;
+    overflow : hidden;
     }
 
 #map-original {
   overflow : hidden;
+}
+
+#index {
+  width : 100%;
+  overflow : hidden;
+  /* background-color:white; */
+  /* display: flex; */
+}
+
+#quote {
+  height : 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  /* overflow : hidden; */
 }
 
 .single-item.left {
