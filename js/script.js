@@ -2,6 +2,20 @@ AOS.init({
   duration: 1200,
 })
 
+// //겹따옴표를 홑따옴표로 바꾸기
+// d3.select(“.city”).click(function(e) { d3.select('.' + this.dataset.city_name).style.display = “block”; });
+//
+// d3.select(“.modal”).click(function(e) { this.style.display = “none"; });
+
+// d3.select(“."sinuiju")
+//   .click(function(e) {
+//     d3.select('.' + this.dataset.sinuiju)
+//     .style.display = "block";
+//   });
+// d3.select(".modal")
+//   .click(function(e) {
+//     this.style.display = "none";
+//   });
 
 //https://codepen.io/osublake/pen/e72106811a34efcccff91a03568cc790.js?v=3
 
