@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.24 119.24"><defs>
+  <style>
+    .a{fill:#fff;stroke:#000;stroke-miterlimit:10;stroke-width:3px;}
+  </style>
+</defs>
+<rect class="a" x="1.5" y="1.5" width="116.24" height="116.24"/>
+<rect x="51.48" y="12.68" width="16.27" height="93.88" transform="translate(59.62 -24.7) rotate(45)"/>
+<rect x="51.48" y="12.68" width="16.27" height="93.88" transform="translate(143.94 59.62) rotate(135)"/>
+</svg>
