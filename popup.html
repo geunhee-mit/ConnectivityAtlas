@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="sinBtn">Sinuiju</button>
+<button id="hyeBtn">Hyesan</button>
+<button id="hyeBtn">Rason</button>
+
+<!-- The Modal -->
+<div id="sinModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Sinuiju</p>
+  </div>
+</div>
+
+<div id="hyeModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Hyesan</p>
+  </div>
+
+<div id="raModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Rason</p>
+  </div>
+
+
+<script>
+// Get the modal
+var modal1 = document.getElementById("sinModal");
+var modal2 = document.getElementById("hyeModal");
+var modal3 = document.getElementById("raModal");
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("sinBtn");
+var btn2 = document.getElementById("hyeBtn");
+var btn3 = document.getElementById("raBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+//세번째 버튼을 넣으면 신의주 닫기 버튼이 동작하지 않는다... 또한 세번째 버튼을 넣지 않아도 두번째 버튼의 닫기 버튼과 창 바깥 눌러서 닫는 것 안된다........
+//btn3.onclick = function() {
+//  modal3.style.display = "block";
+//}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal1.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
