@@ -5,6 +5,18 @@
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
+.sinuiju {
+
+}
+
+.hyesan {
+
+}
+
+.rason {
+
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -43,14 +55,34 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-decoration: none;
   cursor: pointer;
 }
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2309.85 2208.98">
+  <defs>
+  /* <style> */
+  .a{fill:#fff;} /*중국과 북한...*/
+  .b{fill:#d8d8d8;} /*러시아와 한국(안 보임)*/
+  .c{font-size:18.88px;fill:#3b3b3b;font-family:KCC-KP-KwangMyeong-Medium-KP-2011KPS, KP KwangMyeong;} /*도시 라벨*/
+  .d{fill:#e8e8e8;} /*도시 그룹*/
+  .e{fill:#bd0d1a;} /*도시 네모...*/
+  /* </style> */
+
 </style>
+</defs>
+
 </head>
 <body>
 
 <h2>Modal Example</h2>
 
 <!-- Trigger/Open The Modal -->
-<button id="sinBtn">Sinuiju</button>
+<button id="sinBtn">
+  <g id="sinG" class=“sinuiju”>
+    <polygon class="d" points="906.42 974.64 886.08 982.02 868.53 965.99 909.07 935.5 917.11 955.41 906.42 974.64"/>
+    <rect class="e" x="891.14" y="954.8" width="11.8" height="11.8"/>
+    <text class="c" transform="translate(912.5 971.7)">신의주<tspan x="0" y="22.65">Sinuiju</tspan></text>
+  </g>
+</button>
+
 <button id="hyeBtn">Hyesan</button>
 <button id="hyeBtn">Rason</button>
 
@@ -74,7 +106,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <span class="close">&times;</span>
     <p>Rason</p>
   </div>
-
+</svg>
 
 <script>
 // Get the modal

@@ -17,6 +17,9 @@ AOS.init({
 //     this.style.display = "none";
 //   });
 
+// d3.select(".sinuiju").click(function(e) {
+//   d3.select("." + this.dataset.sinuiju).style.display = "block";
+// });
 
 
 

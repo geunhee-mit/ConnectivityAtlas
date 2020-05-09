@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D3 Button Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .button rect {
+      stroke: gold;
+      stroke-width: 2px;
+      stroke-opacity: 1;
+      fill: rgba(255, 255, 255, 0.0);
+    }
+
+    .button rect.active {
+      fill: rgba(9, 181, 0, 0.2);
+    }
+
+    .button text.active {
+      fill: white;
+    }
+
+    .button text {
+      font-size: 30px;
+      fill: gold;
+      pointer-events: none;
+      text-anchor: middle;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="divTag " ></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.js"></script>
+  <script>
+
+    const svg = d3.select('.divTag')
+    .append('svg')
+    .attr('width', 500)
+    .attr('height', 500)
+    .attr("border",1);
+
+    var borderPath = svg.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("height", 500)
+    .attr("width", 500)
+    .style("stroke", "gold")
+    .style("fill", "none")
+    .style("stroke-width", 1);
+
+
+    d3.button = function () {
+
+      var dispatch = d3.dispatch('press', 'release');
+      //커스텀 이벤트 dispatcher를 생성
+      //despatcher 웅행 관리원[조차원], 비상차량 배치 담당자
+
+      var padding = 10,
+      radius = 10;
+      let counter=0;
+
+      function my(selection) {
+        selection.each(function (d, i) {//forEach처럼 배열에 동작하지만 this 객체를 추가로 받는다. 이 this는 HTML DOM Element를 가리킨다.
+          var g = d3.select(this)
+          .attr('id', 'd3-button' + i)
+          .attr('transform', 'translate(' + d.x + ',' + d.y + ')');
+
+          console.log(this);//this는 <g>...</g> 출력
+          console.log(d.label);//Click me, Click me too 등을 반남
+          var text = g.append('text')
+          .attr('font-family', 'FontAwesome')
+          .attr('font-size', 10 )
+          .text("\uf019");
+
+
+          var defs = g.append('defs'); //<defs> 태그는 출력될 콘텐츠를 감싸서 읽힐 수 있게 하는 역할을 하는 듯, 재사용(reuse) 가능해짐
+            console.log(text.node());//<text>Click Me</text>를 반환
+            var bbox = text.node().getBBox(); //getBBox 함수가 호출되는 순간 해당 엘리먼트가 차지하는 bounding box의 정보를 리턴한다
+            console.log(bbox);
+            //SVGRect{ x: -57.5, y: -27, width: 115, height: 33 } 를 반환, 이게 bounding box의 정보인 듯 하다.
+
+            var rect = g.insert('rect', 'text')
+            .attr("x", bbox.x - padding)
+            .attr("y", bbox.y - padding)
+            .attr("width", bbox.width + 2 * padding)
+            .attr("height", bbox.height + 2 * padding)
+            .attr('rx', radius)
+            .attr('ry', radius)
+            .on('mouseover', activate)
+            .on('mouseout', deactivate)
+            .on('click', press)
+
+            //selection.on(typenames[, listener[, capture]]) 여기도 위의 selection의 연속인듯 하다.
+
+          });
+        }
+
+        function activate() {
+          d3.select(this.parentNode).select("rect").classed('active', true);
+          d3.select(this.parentNode).select("text").classed('active', true);
+        }
+
+        function deactivate() {
+          d3.select(this.parentNode).select("rect").classed('active', false);
+          d3.select(this.parentNode).select("text").classed('active', false);
+        }
+
+
+        function press(d, i) {
+          dispatch.call('press', this, d, i)  //등록된 리스너에 이벤트를 보냄
+          d3.select(this).classed('pressed', true);
+
+          var lineCheck = document.getElementsByTagName("line"), index;
+          console.log(lineCheck);
+
+          if(lineCheck.length != 0) {
+            console.log(lineCheck);
+            startEndUniquePointCounter =0;
+            intonationArrayConter =0;
+            interval='';
+
+            for (index = lineCheck.length - 1; index >= 0; index--) {
+              lineCheck[index].parentNode.removeChild(lineCheck[index]);
+            }
+          }
+
+          //여기에서 눌렀을 때 실행될 함수를 호출
+          alert("다운로드 버튼 동작");
+
+          console.log("press: " + this);
+        }
+
+
+        my.on = function () {
+          var value = dispatch.on.apply(dispatch, arguments); //dispatch.on: 이벤트리스너를 등록하거나 등록 해제,  dispatch.apply: 등록된 리스너에 이벤트를 보냄
+          return value === dispatch ? my : valuscript>
+        </body>
+        </html>
