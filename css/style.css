@@ -249,6 +249,14 @@ body.white *:not(.change_color_page) {
   /* z-index: 50; */
 }
 
+.lefty {
+  flex: 0 0 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .single-item.map{
   flex: 0 0 100vw;
   height: 1000px;
